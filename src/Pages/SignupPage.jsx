@@ -87,11 +87,18 @@ const SignupPage = () => {
 
         console.log(response)
 
+        if (response?.payload?.message === 'UserName already exists') {
+            return toast.error('UserName already exists!')
+        }
+
+        if (response?.payload?.message === 'Email is already registered') {
+            return toast.error('Email is already registered!')
+        }
+
         if (response?.payload?.success) {
             console.log('Redirecting to /LMS-Client');
             navigate("/LMS-Client");
         }
-
 
 
         setRegisterData({

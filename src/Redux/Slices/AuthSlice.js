@@ -10,7 +10,7 @@ const initialState = {
 
 export const createAccount = createAsyncThunk('/user/register', async (data) => {
     try {
-        const res = axiosInstance.post('user/register', data)
+        let res = axiosInstance.post('user/register', data)
         toast.promise(res, {
             loading: 'Creating Account',
             success: (data) => {
@@ -18,6 +18,9 @@ export const createAccount = createAsyncThunk('/user/register', async (data) => 
             },
             error: "failed to create account"
         })
+        // getting response resolved here
+        res = await res;
+        return res.data;
     } catch (e) {
         return toast.error(e?.response?.data?.message)
     }
