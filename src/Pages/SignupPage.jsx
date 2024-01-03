@@ -70,9 +70,6 @@ const SignupPage = () => {
             return toast.error('Password must contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!')
         }
 
-        if (password !== confirmPassword) {
-            return toast.error('Password & confirm password are not same')
-        }
 
 
         const formData = new FormData()
@@ -85,18 +82,9 @@ const SignupPage = () => {
 
         const response = await dispatch(createAccount(formData))
 
-        console.log(response)
 
-        if (response?.payload?.message === 'UserName already exists') {
-            return toast.error('UserName already exists!')
-        }
-
-        if (response?.payload?.message === 'Email is already registered') {
-            return toast.error('Email is already registered!')
-        }
 
         if (response?.payload?.success) {
-            console.log('Redirecting to /LMS-Client');
             navigate("/LMS-Client");
         }
 

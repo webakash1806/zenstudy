@@ -4,6 +4,7 @@ import { useDispatch } from 'react-redux';
 import { Link, useNavigate } from 'react-router-dom';
 
 import HomeLayout from '../Layouts/HomeLayout'
+import { loginAccount } from '../Redux/Slices/AuthSlice';
 
 const LoginPage = () => {
 
@@ -23,7 +24,7 @@ const LoginPage = () => {
         })
     }
 
-    async function loginAccount(e) {
+    async function login(e) {
         e.preventDefault()
         const { email, password } = loginData
         if (!email || !password) {
@@ -39,25 +40,10 @@ const LoginPage = () => {
             return toast.error('Password must contain Minimum eight characters, at least one uppercase letter, one lowercase letter, one number and one special character!')
         }
 
-        const formData = new FormData()
-        formData.append('email', email)
-        formData.append('password', password)
-
-
-        const response = await dispatch(loginAccount(formData))
-
+        const response = await dispatch(loginAccount(loginData))
         console.log(response)
 
-        // if (response?.payload?.message === 'UserName already exists') {
-        //     return toast.error('UserName already exists!')
-        // }
-
-        // if (response?.payload?.message === 'Email is already registered') {
-        //     return toast.error('Email is already registered!')
-        // }
-
         if (response?.payload?.success) {
-            console.log('Redirecting to /LMS-Client');
             navigate("/LMS-Client");
         }
 
@@ -72,7 +58,7 @@ const LoginPage = () => {
     return (
         <HomeLayout>
             <div className='h-[100vh] flex items-center justify-center text-white'>
-                <form noValidate onSubmit={loginAccount} action="" className='flex flex-col items-center justify-center gap-[8px] bg-black p-4 rounded-lg shadow-md shadow-[#ffb7275a]'>
+                <form noValidate onSubmit={login} action="" className='flex flex-col items-center justify-center gap-[8px] bg-black p-4 rounded-lg shadow-md shadow-[#ffb7275a]'>
                     <h1 className='font-semibold text-[1.4rem] tracking-[0.6px]'>Login</h1>
 
 
