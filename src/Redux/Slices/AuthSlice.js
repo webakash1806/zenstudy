@@ -71,15 +71,22 @@ const authSlice = createSlice({
     initialState,
     reducers: {},
     extraReducers: (builder) => {
-        builder.addCase(loginAccount.fulfilled || createAccount.fulfilled, (state, action) => {
+        builder.addCase(loginAccount.fulfilled, (state, action) => {
             localStorage.setItem('data', JSON.stringify(action?.payload?.user))
             localStorage.setItem('isLoggedIn', true)
             localStorage.setItem('role', action?.payload?.user?.role)
             state.isLoggedIn = true
             state.data = action?.payload?.user
             state.role = action?.payload?.user?.role
-        })
-            .addCase(logout.fulfilled, (state) => {
+        }).
+            addCase(createAccount.fulfilled, (state, action) => {
+                localStorage.setItem('data', JSON.stringify(action?.payload?.user))
+                localStorage.setItem('isLoggedIn', true)
+                localStorage.setItem('role', action?.payload?.user?.role)
+                state.isLoggedIn = true
+                state.data = action?.payload?.user
+                state.role = action?.payload?.user?.role
+            }).addCase(logout.fulfilled, (state) => {
                 localStorage.clear()
                 state.data = {}
                 state.isLoggedIn = false
