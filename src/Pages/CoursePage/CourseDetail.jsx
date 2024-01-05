@@ -18,10 +18,11 @@ const CourseDetail = () => {
                 <div className='flex flex-col md:w-[90%] md:flex-row-reverse w-full items-center justify-around md:justify-between gap-3'>
                     <img
                         className='min-w-[95%] sm:min-w-[90%] md:min-w-[20rem]  border h-[11rem] sm:h-[13rem] md:h-[11rem] rounded-md object-cover'
-                        src={state?.thumbnail.secure_url} alt={`${state?.title} thumbnail`} />
+                        src={state?.thumbnail?.secure_url} alt={`${state?.title} thumbnail`} />
                     <div className=' w-[95%] sm:w-[90%] md:w-[60vw]'>
-                        <h2 className='text-[1.5rem] capitalize font-[600] tracking-wide mb-2'>{state?.title}</h2>
-                        <p className='text-[0.95rem] text-[#dbdbdb]'>{state?.description}</p>
+                        <h2 className='text-[1.5rem] capitalize font-[600] tracking-wide '>{state?.title}</h2>
+                        <p className='text-[0.95rem] text-[#dbdbdb] my-2'>{state?.description}</p>
+                        <button className='bg-[#FF6700] hover:bg-[#f94b00] duration-300 p-2 mt-4 px-10 text-[1.1rem] font-semibold rounded-md'>Enroll now.</button>
                     </div>
                 </div>
                 <div className='flex flex-col w-[95%] sm:w-[90%] sm:flex-row sm:justify-around rounded-md bg-transparent shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-start justify-center md:gap-6'>
