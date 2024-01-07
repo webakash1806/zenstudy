@@ -100,7 +100,7 @@ const EditProfile = () => {
                         <div className="flex flex-col items-start justify-center gap-[0.5px]">
                             <label htmlFor="userName" className='text-[#a6b0bb] font-semibold text-[0.85rem] tracking-wide'>UserName
                             </label>
-                            <input type="text" readOnly
+                            <input type="text" readOnly disabled
                                 className='min-w-[17rem] sm:w-[20.5rem] rounded-[3px] border h-full border-[#2d3a4b] p-2 focus:border-[#745FDC]  outline-none bg-transparent text-[0.95rem] tracking-wide resize-none'
                                 name='userName'
                                 id='userName'
@@ -123,7 +123,7 @@ const EditProfile = () => {
                             <label htmlFor="email" className='text-[#a6b0bb] font-semibold text-[0.85rem] tracking-wide'>Email
                             </label>
                             <input type="email"
-                                readOnly
+                                readOnly disabled
                                 className='min-w-[17rem] sm:w-[20.5rem] rounded-[3px] border h-full border-[#2d3a4b] p-2 focus:border-[#745FDC]  outline-none bg-transparent text-[0.95rem] tracking-wide resize-none'
                                 name='email'
                                 id='email'
@@ -137,7 +137,7 @@ const EditProfile = () => {
                         <div className="flex flex-col items-start justify-center gap-[0.5px]">
                             <label htmlFor="role" className='text-[#a6b0bb] font-semibold text-[0.85rem] tracking-wide'>Role
                             </label>
-                            <input type="text" readOnly
+                            <input type="text" readOnly disabled
                                 className='min-w-[17rem] sm:w-[20.5rem] rounded-[3px] border h-full border-[#2d3a4b] p-2 focus:border-[#745FDC]  outline-none bg-transparent text-[0.95rem] tracking-wide resize-none'
                                 name='role'
                                 value={role}
@@ -146,7 +146,7 @@ const EditProfile = () => {
                         <div className="flex flex-col items-start justify-center gap-[0.5px]">
                             <label htmlFor="subscription" className='text-[#a6b0bb] font-semibold text-[0.85rem] tracking-wide'>Subscription
                             </label>
-                            <input type="text" readOnly
+                            <input type="text" readOnly disabled
                                 className='min-w-[17rem] sm:w-[20.5rem] rounded-[3px] border h-full border-[#2d3a4b] p-2 focus:border-[#745FDC]  outline-none bg-transparent text-[0.95rem] tracking-wide resize-none'
                                 name='subscription'
                                 value={userData?.subscription?.status === 'active' ? "Active" : "Inactive"}
