@@ -32,11 +32,11 @@ const App = () => {
           <Route path="/LMS-Client/course/create" element={<CreateCourse />} />
         </Route>
 
-        <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}>
-          <Route path="/LMS-Client/me" element={<Profile />} />
-          <Route path="/LMS-Client/profile/edit" element={<EditProfile />} />
-          <Route path="/LMS-Client/checkout" element={<CheckoutPage />} />
-        </Route>
+        {/* <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}> */}
+        <Route path="/LMS-Client/me" element={<Profile />} />
+        <Route path="/LMS-Client/profile/edit" element={<EditProfile />} />
+        <Route path="/LMS-Client/checkout" element={<CheckoutPage />} />
+        {/* </Route> */}
       </Routes>
     </>
   )
