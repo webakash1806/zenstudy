@@ -26,17 +26,17 @@ const App = () => {
         <Route path="/LMS-Client/course" element={<CourseList />} />
         <Route path="/LMS-Client/course/description" element={<CourseDetail />} />
         <Route path="*" element={<PageNotFound />} />
-        <Route path="/LMS-Client/contact" element={<AccessDeniedPage />} />
+        <Route path="/LMS-Client/denied" element={<AccessDeniedPage />} />
 
         <Route element={<RequireAuth allowedRoles={['ADMIN']} />}>
           <Route path="/LMS-Client/course/create" element={<CreateCourse />} />
         </Route>
 
-        {/* <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}> */}
-        <Route path="/LMS-Client/me" element={<Profile />} />
-        <Route path="/LMS-Client/profile/edit" element={<EditProfile />} />
-        <Route path="/LMS-Client/checkout" element={<CheckoutPage />} />
-        {/* </Route> */}
+        <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}>
+          <Route path="/LMS-Client/me" element={<Profile />} />
+          <Route path="/LMS-Client/profile/edit" element={<EditProfile />} />
+          <Route path="/LMS-Client/checkout" element={<CheckoutPage />} />
+        </Route>
       </Routes>
     </>
   )
