@@ -69,9 +69,9 @@ const CheckoutPage = () => {
         <HomeLayout>
             <div className='flex items-center justify-center h-[90vh] '>
                 <form action="" onSubmit={handleSubscription}
-                    className='relative h-[24rem] pt-3 flex flex-col items-center justify-between text-white bg-[#0063f8aa] rounded-md shadow-md shadow-[#3646a0]'>
+                    className='bg-gradient-to-t  overflow-x-hidden from-[#15191E]   to-[#13157df6] relative h-[24rem] pt-3 flex flex-col items-center justify-between text-white bg-[#0063f8aa] rounded-md shadow-md shadow-[#3646a0]'>
                     <div className='flex items-center w-fit justify-between  p-2 gap-3 pr-5 rounded-lg left-0 rounded-b-none text-[1.1rem]'>
-                        <BsArrowLeft onClick={() => navigate(-1)} className='text-[#BEC1FC] text-[1.3rem] absolute left-4' />
+                        <BsArrowLeft onClick={() => navigate(-1)} className='text-[#BEC1FC] cursor-pointer text-[1.3rem] absolute left-4' />
                         <h1 className='tracking-wide text-[1.2rem] font-semibold'>Subscribe</h1>
                     </div>
                     <div className='h-[19.5rem] bg-[#1A202A] mx-5 p-3 w-[15rem] flex flex-col items-center justify-around rounded-md rounded-b-none'>
@@ -81,7 +81,7 @@ const CheckoutPage = () => {
                             <p>100% refundable</p>
                             <p>*Terms and Condition applied</p>
                         </div>
-                        <button type='submit' className='bg-yellow-600 p-2 text-[1.1rem] capitalize rounded-md w-full'>subscribe</button>
+                        <button type='submit' className='bg-[#FF6700] hover:bg-[#ff4d00] p-2 text-[1.1rem] capitalize rounded-md w-full font-semibold tracking-wide'>subscribe</button>
 
                     </div>
 
