@@ -11,6 +11,7 @@ import EditProfile from './Pages/EditProfile'
 import HomePage from './Pages/HomePage'
 import LoginPage from './Pages/LoginPage'
 import PageNotFound from './Pages/PageNotFound'
+import CheckoutFail from './Pages/Payment/CheckoutFail'
 import CheckoutPage from './Pages/Payment/CheckoutPage'
 import CheckoutSuccess from './Pages/Payment/CheckoutSuccess'
 import Profile from './Pages/Profile'
@@ -38,6 +39,7 @@ const App = () => {
           <Route path="/LMS-Client/profile/edit" element={<EditProfile />} />
           <Route path="/LMS-Client/checkout" element={<CheckoutPage />} />
           <Route path="/LMS-Client/checkout/success" element={<CheckoutSuccess />} />
+          <Route path="/LMS-Client/checkout/fail" element={<CheckoutFail />} />
         </Route>
       </Routes>
     </>
