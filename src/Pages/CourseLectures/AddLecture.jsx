@@ -76,7 +76,7 @@ const AddLecture = () => {
                 lecture: null,
                 lectureVideo: ""
             })
-            navigate('/LMS-Client/course')
+            navigate(-1)
 
         }
 
