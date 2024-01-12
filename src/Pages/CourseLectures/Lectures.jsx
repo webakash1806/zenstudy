@@ -17,10 +17,16 @@ const Lectures = () => {
     const { lectures } = useSelector((state) => state?.lecture)
     const { role } = useSelector((state) => state?.auth)
 
+
     const [currentLecture, setCurrentLecture] = useState(0)
     const getLecturesList = async () => {
         await dispatch(getCourseLectures(courseId))
     }
+
+
+
+    const currentLectureData = { courseId: courseId, lecture: lectures[currentLecture] }
+    console.log({ ...currentLectureData })
 
     const removeLecture = async (data) => {
         await dispatch(deleteCourseLecture(data))
@@ -68,7 +74,7 @@ const Lectures = () => {
                                                 <p className='w-[90vw] md:w-[33vw] lg:w-[30vw] line-clamp-1 text-[0.95rem] tracking-wide'>{data.description}</p>
                                                 {role === 'ADMIN' ?
                                                     (<div className='flex items-center justify-center gap-3 font-semibold '>
-                                                        <button className='duration-300 rounded-[4px] p-1 px-3 bg-[#fc4e09] hover:bg-[#f44500]' onClick={() => navigate('/LMS-Client/course/lecture/update', { state: { ...state } })}>Update</button>
+                                                        <button className='duration-300 rounded-[4px] p-1 px-3 bg-[#fc4e09] hover:bg-[#f44500]' onClick={() => navigate('/LMS-Client/course/lecture/update', { state: { ...currentLectureData } })}>Update</button>
                                                         <button className='duration-300 rounded-[4px] p-1 px-3 bg-[#e70000] hover:bg-[#e70000dd]' onClick={() => {
                                                             removeLecture([courseId, data._id])
                                                         }}>Delete</button>

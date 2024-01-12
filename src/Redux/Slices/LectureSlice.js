@@ -25,6 +25,7 @@ export const getCourseLectures = createAsyncThunk("/course/lectures", async (cou
 
 export const addCourseLectures = createAsyncThunk("/course/create/lectures", async (data) => {
     try {
+        console.log(data[1])
         const response = axiosInstance.post(`/course/create/lectures/${data[0]}`, data[1])
         toast.promise(response, {
             loading: "Adding lecture",
@@ -39,9 +40,25 @@ export const addCourseLectures = createAsyncThunk("/course/create/lectures", asy
     }
 })
 
+export const updateCourseLecture = createAsyncThunk("/course/update/lectures", async (data) => {
+    try {
+        const response = axiosInstance.put(`/course/update/lectures/${data[0]}/${data[1]}`, data[2])
+        toast.promise(response, {
+            loading: "Updating lecture",
+            success: "Lectures updated successfully",
+            error: "Failed to update the lectures"
+        })
+
+        return (await response).data
+
+    } catch (e) {
+        return toast.error(e?.response?.data?.message)
+    }
+})
+
 export const deleteCourseLecture = createAsyncThunk("/course/remove/lectures", async (data) => {
     try {
-        const response = axiosInstance.delete(`/course/remove/lectures/${data[0]}/${data[1]}`)
+        const response = axiosInstance.delete(`/course/remove/lectures/${data[0]}/${data[1]}`, data[2])
         toast.promise(response, {
             loading: "Removing lecture",
             success: "Lectures removed successfully",
@@ -65,6 +82,9 @@ const lectureSlice = createSlice({
                 state.lectures = action?.payload?.lectures
             })
             .addCase(addCourseLectures.fulfilled, (state, action) => {
+                state.lectures = action?.payload?.course?.lectures
+            })
+            .addCase(updateCourseLecture.fulfilled, (state, action) => {
                 state.lectures = action?.payload?.course?.lectures
             })
     }
