@@ -4,6 +4,7 @@ import { Route, Routes } from 'react-router-dom'
 import RequireAuth from './Components/Auth/RequireAuth'
 import AboutUs from './Pages/AboutUs'
 import AccessDeniedPage from './Pages/AccessDeniedPage'
+import ChangePassword from './Pages/ChangePassword'
 import AddLecture from './Pages/CourseLectures/AddLecture'
 import Lectures from './Pages/CourseLectures/Lectures'
 import UpdateLecture from './Pages/CourseLectures/UpdateLecture'
@@ -44,6 +45,7 @@ const App = () => {
         <Route element={<RequireAuth allowedRoles={['ADMIN', 'USER']} />}>
           <Route path="/LMS-Client/me" element={<Profile />} />
           <Route path="/LMS-Client/profile/edit" element={<EditProfile />} />
+          <Route path='/LMS-Client/changePassword' element={<ChangePassword />} />
           <Route path="/LMS-Client/checkout" element={<CheckoutPage />} />
           <Route path="/LMS-Client/checkout/success" element={<CheckoutSuccess />} />
           <Route path="/LMS-Client/checkout/fail" element={<CheckoutFail />} />
