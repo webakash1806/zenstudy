@@ -88,17 +88,6 @@ const courseSlice = createSlice({
                 state.courseData = [...action.payload]
             }
         })
-        // .addCase(createCourse.fulfilled, (state, action) => {
-        //     if (action.payload) {
-        //         state.courseData = [...action.payload]
-        //     }
-        // })
-        // .addCase(updateCourse.fulfilled, (state, action) => {
-        //     console.log(action)
-        //     if (action.payload) {
-        //         state.courseData = [...action.payload]
-        //     }
-        // })
     }
 })
 
