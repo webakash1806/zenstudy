@@ -28,7 +28,7 @@ const App = () => {
   return (
     <>
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/LMS-Client" element={<HomePage />} />
         <Route path="/LMS-Client/about" element={<AboutUs />} />
         <Route path="/LMS-Client/login" element={<LoginPage />} />
         <Route path="/LMS-Client/register" element={<SignupPage />} />
