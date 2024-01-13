@@ -13,6 +13,7 @@ import CourseList from './Pages/CoursePage/CourseList'
 import CreateCourse from './Pages/CoursePage/CreateCourse'
 import UpdateCourse from './Pages/CoursePage/UpdateCourse'
 import EditProfile from './Pages/EditProfile'
+import ForgotPassword from './Pages/ForgotPassword'
 import HomePage from './Pages/HomePage'
 import LoginPage from './Pages/LoginPage'
 import PageNotFound from './Pages/PageNotFound'
@@ -20,6 +21,7 @@ import CheckoutFail from './Pages/Payment/CheckoutFail'
 import CheckoutPage from './Pages/Payment/CheckoutPage'
 import CheckoutSuccess from './Pages/Payment/CheckoutSuccess'
 import Profile from './Pages/Profile'
+import ResetPassword from './Pages/ResetPassword'
 import SignupPage from './Pages/SignupPage'
 
 const App = () => {
@@ -34,6 +36,8 @@ const App = () => {
         <Route path="/LMS-Client/course/description" element={<CourseDetail />} />
         <Route path="*" element={<PageNotFound />} />
         <Route path="/LMS-Client/denied" element={<AccessDeniedPage />} />
+        <Route path="/LMS-Client/forgot-password" element={<ForgotPassword />} />
+        <Route path="/LMS-Client/reset-password/:resetToken" element={<ResetPassword />} />
 
         <Route element={<RequireAuth allowedRoles={['ADMIN']} />}>
           <Route path="/LMS-Client/course/create" element={<CreateCourse />} />
