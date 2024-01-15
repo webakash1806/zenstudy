@@ -10,6 +10,7 @@ import { deleteCourse, getAllCourses } from '../../Redux/Slices/CourseSlice'
 import { allPayment } from '../../Redux/Slices/RazorpaySlice'
 import { getStatsData } from '../../Redux/Slices/StatsSlice'
 
+
 ChartJS.register(ArcElement, BarElement, CategoryScale, Legend, LinearScale, Title, Tooltip)
 
 
@@ -73,23 +74,25 @@ const AdminDashboard = () => {
         <HomeLayout>
             <div className='text-white h-[90vh] flex flex-col items-center justify-center'>
                 <h1>Admin Dashboard</h1>
-                <div className='flex items-center justify-center flex-col gap-4'>
-                    <div>
-                        <Doughnut data={userStats} />
-                    </div>
-                    <div className='grid grid-cols-2 gap-8'>
-                        <div className='flex flex-col  items-center justify-center'>
-                            <FaUsers className='text-[2.7rem]' />
-                            <div className='text-center'>
-                                <p>Registered Users</p>
-                                <p>{allUsersCount}</p>
-                            </div>
+                <div className='grid grid-cols-2'>
+                    <div className='flex items-center justify-center flex-col gap-4'>
+                        <div>
+                            <Doughnut data={userStats} />
                         </div>
-                        <div className='flex flex-col items-center justify-center'>
-                            <FaUsers className='text-[2.7rem]' />
-                            <div className='text-center'>
-                                <p>Subscribed Users</p>
-                                <p>{subscribedCount}</p>
+                        <div className='grid grid-cols-2 gap-8'>
+                            <div className='flex flex-col  items-center justify-center'>
+                                <FaUsers className='text-[2.7rem]' />
+                                <div className='text-center'>
+                                    <p>Registered Users</p>
+                                    <p>{allUsersCount}</p>
+                                </div>
+                            </div>
+                            <div className='flex flex-col items-center justify-center'>
+                                <FaUsers className='text-[2.7rem]' />
+                                <div className='text-center'>
+                                    <p>Subscribed Users</p>
+                                    <p>{subscribedCount}</p>
+                                </div>
                             </div>
                         </div>
                     </div>
