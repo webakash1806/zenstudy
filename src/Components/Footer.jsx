@@ -10,6 +10,9 @@ import {
 } from 'react-icons/bs'
 
 const Footer = () => {
+
+    const year = new Date().getFullYear()
+
     return (
         <>
             <footer className=' bg-[#1B2124] text-white'>
@@ -66,7 +69,7 @@ const Footer = () => {
                         </div>
                     </div>
                 </div>
-                <div className='text-center text-[1.05rem] font-[600] p-3 border-t'>2024 <span>&#169;</span> | LMS</div>
+                <div className='text-center text-[1.05rem] font-[600] p-3 border-t'><span>&#169;</span> {year} | Copyright webakash1806</div>
             </footer>
         </>
     )
