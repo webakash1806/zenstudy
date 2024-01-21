@@ -5,6 +5,7 @@ import RequireAuth from './Components/Auth/RequireAuth'
 import AboutUs from './Pages/AboutUs'
 import AccessDeniedPage from './Pages/AccessDeniedPage'
 import ChangePassword from './Pages/ChangePassword'
+import ContactPage from './Pages/ContactPage'
 import AddLecture from './Pages/CourseLectures/AddLecture'
 import Lectures from './Pages/CourseLectures/Lectures'
 import UpdateLecture from './Pages/CourseLectures/UpdateLecture'
@@ -31,6 +32,7 @@ const App = () => {
       <Routes>
         <Route path="/LMS-Client" element={<HomePage />} />
         <Route path="/LMS-Client/about" element={<AboutUs />} />
+        <Route path="/LMS-Client/contact" element={<ContactPage />} />
         <Route path="/LMS-Client/login" element={<LoginPage />} />
         <Route path="/LMS-Client/register" element={<SignupPage />} />
         <Route path="/LMS-Client/course" element={<CourseList />} />
