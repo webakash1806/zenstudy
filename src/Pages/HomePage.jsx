@@ -52,6 +52,11 @@ const HomePage = () => {
                         </div>
                     </div>
                 </main>
+                <section className='w-full flex items-center justify-center gap-4'>
+                    <div className='mt-4 flex w-fit gap-2 flex-col sm:flex-row sm:justify-evenly rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-start justify-center md:gap-6'>
+                        hello
+                    </div>
+                </section>
                 <section>
                     <div className='w-full p-5 py-12 sm:px-20 md:px-[10vw] lg:px-[25vw]'>
                         <div className=" join join-vertical w-full rounded-md shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a]">
