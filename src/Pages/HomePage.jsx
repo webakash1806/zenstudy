@@ -53,8 +53,33 @@ const HomePage = () => {
                     </div>
                 </main>
                 <section className='w-full flex items-center justify-center gap-4'>
-                    <div className='mt-4 flex w-fit gap-2 flex-col sm:flex-row sm:justify-evenly rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-start justify-center md:gap-6'>
-
+                    <div className='mt-4 flex w-fit gap-4  rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
+                        ICO
+                        <div className=''>
+                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
+                            <p>description</p>
+                        </div>
+                    </div>
+                    <div className='mt-4 flex w-fit gap-4  rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
+                        ICO
+                        <div className=''>
+                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
+                            <p>description</p>
+                        </div>
+                    </div>
+                    <div className='mt-4 flex w-fit gap-4  rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
+                        ICO
+                        <div className=''>
+                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
+                            <p>description</p>
+                        </div>
+                    </div>
+                    <div className='mt-4 flex w-fit gap-4  rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
+                        ICO
+                        <div className=''>
+                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
+                            <p>description</p>
+                        </div>
                     </div>
                 </section>
                 <section>
