@@ -12,7 +12,6 @@ const HomePage = () => {
     useCountUp({
         ref: 'counter',
         enableScrollSpy: true,
-        scrollSpyDelay: 1000,
     });
 
     return (
@@ -98,25 +97,25 @@ const HomePage = () => {
                     </div>
                 </main>
                 <section className='flex flex-wrap items-center justify-center w-full bg-gradient-to-b from-[#000000] via-[#150b0ecb]   to-[#4b031b] border-y-2 border-[#595050] py-6'>
-                    <div className='flex flex-col items-center justify-center px-16 py-6 w-fit'>
-                        <div className='text-[2.3rem] font-semibold tracking-wide text-white'><CountUp end={1060} enableScrollSpy /><span className='font-[450] text-[2.7rem]'>+</span>
+                    <div className='flex w-[17rem] flex-col items-center justify-center  py-6'>
+                        <div className='text-[2.3rem] font-semibold tracking-wide text-white'><CountUp end={100000} enableScrollSpy /><span className='font-[450] text-[2.7rem]'>+</span>
                         </div>
-                        <p className='text-[1.4rem] font-[500] tracking-wide'>Students Placed</p>
+                        <p className='text-[1.4rem] font-[500] tracking-wide'>Student&apos;s Enrolled</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center px-16 py-6 w-fit'>
+                    <div className='flex flex-col items-center justify-center py-6 w-[17rem]'>
                         <div className='text-[2.3rem] font-semibold tracking-wide text-white'><CountUp end={1060} enableScrollSpy /><span className='font-[450] text-[2.7rem]'>+</span>
                         </div>
-                        <p className='text-[1.4rem] font-[500] tracking-wide'>Students Placed</p>
+                        <p className='text-[1.4rem] font-[500] tracking-wide'>Student&apos;s Placed</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center px-16 py-6 w-fit'>
-                        <div className='text-[2.3rem] font-semibold tracking-wide text-white'><CountUp end={1060} enableScrollSpy /><span className='font-[450] text-[2.7rem]'>+</span>
+                    <div className='flex flex-col items-center justify-center py-6 w-[17rem]'>
+                        <div className='text-[2.3rem] font-semibold tracking-wide text-white'><CountUp end={1000} enableScrollSpy /><span className='font-[450] text-[2.7rem]'>+</span>
                         </div>
-                        <p className='text-[1.4rem] font-[500] tracking-wide'>Students Placed</p>
+                        <p className='text-[1.4rem] font-[500] tracking-wide'>Career Transition</p>
                     </div>
-                    <div className='flex flex-col items-center justify-center px-16 py-6 w-fit'>
+                    <div className='flex flex-col items-center justify-center py-6 w-[17rem]'>
                         <div className='text-[2.3rem] font-semibold tracking-wide text-white'><CountUp end={1060} enableScrollSpy /><span className='font-[450] text-[2.7rem]'>+</span>
                         </div>
-                        <p className='text-[1.4rem] font-[500] tracking-wide'>Students Placed</p>
+                        <p className='text-[1.4rem] font-[500] tracking-wide'>Student&apos;s Placed</p>
                     </div>
 
                 </section>
