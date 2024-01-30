@@ -56,33 +56,33 @@ const HomePage = () => {
                         </div>
                     </div>
                 </main>
-                <section className='flex items-center justify-center w-full gap-4'>
+                <section className='flex flex-wrap items-center justify-center w-full gap-4'>
                     <div className='mt-4 flex w-fit gap-4 px-4 pr-6 rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
-                        <img src={perfIcon} alt="" className='p-[5px] rounded-sm w-10 bg-[#ff770062]' />
-                        <div className=''>
-                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
-                            <p>description</p>
+                        <img src={perfIcon} alt="" className='p-[5px] rounded-sm w-10 bg-[#ff770062] ' />
+                        <div className='min-w-[9.5rem]'>
+                            <h1 className='font-bold text-[1.1rem] text-white'>60%</h1>
+                            <p className='text-[0.87rem]'>Average Salary Hike</p>
                         </div>
                     </div>
                     <div className='mt-4 flex w-fit gap-4 px-4 pr-6 rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
                         <img src={eduIcon} alt="" className='p-[5px] rounded-sm w-10 bg-[#6f7fe762]' />
-                        <div className=''>
-                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
-                            <p>description</p>
+                        <div className='min-w-[9.5rem]'>
+                            <h1 className='font-bold text-[1.1rem] text-white'>150+</h1>
+                            <p className='text-[0.87rem]'>Different Courses</p>
                         </div>
                     </div>
                     <div className='mt-4 flex w-fit gap-4 px-4 pr-6 rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
                         <img src={jobIcon} alt="" className='p-[5px] rounded-sm w-10 bg-[#00ff0062]' />
-                        <div className=''>
-                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
-                            <p>description</p>
+                        <div className='min-w-[9.5rem]'>
+                            <h1 className='font-bold text-[1.1rem] text-white'>50+</h1>
+                            <p className='text-[0.87rem]'>Hiring Partners</p>
                         </div>
                     </div>
                     <div className='mt-4 flex w-fit gap-4 px-4 pr-6 rounded-md bg-[#15191E] shadow-[2px_2px_9px_#000,-2px_-2px_1px_#3a3b3a] p-2 flex-wrap items-center justify-center'>
                         <img src={customerIcon} alt="" className='p-[5px] rounded-sm w-10 bg-[#00d0ff62]' />
-                        <div className=''>
-                            <h1 className='font-bold text-[1.05rem]'>Heading</h1>
-                            <p>description</p>
+                        <div className='min-w-[9.5rem]'>
+                            <h1 className='font-bold text-[1.1rem] text-white'>24&#xd7;7</h1>
+                            <p className='text-[0.87rem]'>Customer Support</p>
                         </div>
                     </div>
                 </section>
